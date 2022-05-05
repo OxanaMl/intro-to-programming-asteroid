@@ -4,79 +4,84 @@
     <title>Portfolio Oksana Melnyk</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
+    <link rel="stylesheet" href="css/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <body>
     <header>
+      <h1>OKSANA MELNYK</h1>
       <nav>
         <ul>
-          <li><a href="#about" target="_blank">About</a></li>
-          <li><a href="#skills" target="_blank">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#connect">Connect</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#connect">CONNECT</a></li>
         </ul>
       </nav>
-      <h1>Front End Software Developer</h1>
     </header>
 
-    <section id="about">
-      <h2>About</h2>
-      <img src="/img/oksana-img.JPG" />
-      <p>
-        My name is Oksana. I am originally from Ukraine and currently live in
-        Southern California. I have background in Education and Business. In my
-        free time I enjoy hiking and learning languages. Aspiring to become a
-        Front End Software Developer.
-      </p>
-    </section>
+    <div class="container">
+      <div class="img-div">
+        <img src="img/oksana-img.JPG">
+      </div>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          My name is Oksana. I am originally from Ukraine and currently live in
+          Southern California. I have background in Education and Business. In my
+          free time I enjoy hiking and learning languages. Aspiring to become a
+          Front End Software Developer.
+        </p>
+      </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul></ul>
-    </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul></ul>
+        <div style="clear:both;"></div>
+      </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
+      <section id="experience">
+        <h2>Experience</h2>
 
-      <ul>
-        <li>Student at Code The Dream - current</li>
-        <li>Marketing Program Manager - 3 years</li>
-      </ul>
-    </section>
+        <ul>
+          <li class="experience-card"><strong>Student</strong> &mdash; Code The Dream <span class="emphasis">Jan 2022 - Present</span></li>
+          <li class="experience-card"><strong>Program Manager</strong> &mdash; B3NET Inc. <span class="emphasis">Jan 2018 - Oct 2020</span></li>
+        </ul>
+      </section>
 
-    <section id="connect">
-      <h2>Connect</h2>
-      <ul>
-        <li><a href="mailto:kesusha.melnyk@gmail.com">Email</a></li>
-        <li><a href="https://github.com/OxanaMl" target="_blank">GitHub</a></li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/oksana-m-27459b10a/"
-            target="_blank"
-            >LinkedIn</a
-          >
-        </li>
-      </ul>
-    </section>
+      <section id="connect">
+        <h2>Connect</h2>
+        <ul>
+          <li><a href="mailto:kesusha.melnyk@gmail.com">Email</a></li>
+          <li><a href="https://github.com/OxanaMl" target="_blank">GitHub</a></li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/oksana-m-27459b10a/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Leave a Message</h2>
-      <form name="leave_message">
-        <label>Name:</label>
-        <input type="text" name="name" required /><br />
-        <label>Email:</label>
-        <input type="email" name="email" required /><br />
-        <label>Message:</label>
-        <textarea name="message" required></textarea><br />
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+      <section>
+        <h2>Leave a Message</h2>
+        <form name="leave_message">
+          <label>Name:</label>
+          <input type="text" name="name" required /><br />
+          <label>Email:</label>
+          <input type="email" name="email" required /><br />
+          <label>Message:</label>
+          <textarea name="message" required></textarea><br />
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </section>
 
-    <section id="messages">
-      <h2>Messages</h2>
-      <ul></ul>
-    </section>
-
+      <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+      </section>
+    </div>
     <footer></footer>
     <script src="js/index.js"></script>
   </body>
