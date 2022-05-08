@@ -5,24 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    <!-- <link rel="stylesheet" href="css/index2.css" /> -->
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <body>
     <header>
-      <h1>OKSANA MELNYK</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#experience">EXPERIENCE</a></li>
-          <li><a href="#connect">CONNECT</a></li>
-        </ul>
-      </nav>
+      <div class="nav-container">
+        <h1>OKSANA MELNYK</h1>
+        <ul class="main-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#connect">Connect</a></li>
+          </ul>
+      </div>
     </header>
 
-    <div class="container">
+    <div class="main-container">
       <div class="img-div">
-        <img src="img/oksana-img.JPG">
+        <img src="img/oksana-img.JPG" alt="Oksana">
       </div>
       <section id="about">
         <h2>About</h2>
@@ -36,14 +37,14 @@
 
       <section id="skills">
         <h2>Skills</h2>
-        <ul></ul>
+        <ul class="skills-container"></ul>
         <div style="clear:both;"></div>
       </section>
 
       <section id="experience">
         <h2>Experience</h2>
 
-        <ul>
+        <ul class="experience-container">
           <li class="experience-card"><strong>Student</strong> &mdash; Code The Dream <span class="emphasis">Jan 2022 - Present</span></li>
           <li class="experience-card"><strong>Program Manager</strong> &mdash; B3NET Inc. <span class="emphasis">Jan 2018 - Oct 2020</span></li>
         </ul>
@@ -51,7 +52,7 @@
 
       <section id="connect">
         <h2>Connect</h2>
-        <ul>
+        <ul class="connect-container">
           <li><a href="mailto:kesusha.melnyk@gmail.com">Email</a></li>
           <li><a href="https://github.com/OxanaMl" target="_blank">GitHub</a></li>
           <li>
@@ -66,7 +67,7 @@
 
       <section>
         <h2>Leave a Message</h2>
-        <form name="leave_message">
+        <form name="leave_message" class="leave-message">
           <label>Name:</label>
           <input type="text" name="name" required /><br />
           <label>Email:</label>
