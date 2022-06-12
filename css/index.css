@@ -58,7 +58,8 @@ section {
 .experience-container,
 .skills-container,
 .connect-container,
-.leave-message {
+.leave-message,
+.project-container {
   display: flex;
 }
 
@@ -114,8 +115,19 @@ img {
   border-radius: 1px;
   padding: 0.8% 1.5%;
   font-weight: 600;
-  /* margin-right: 1%; */
-  /* float: left; */
+}
+.project-container {
+  gap: 2rem;
+}
+.project-card {
+  border: 1px solid #aa0e2a;
+  border-radius: 1px;
+  padding: 2% 2%;
+  height: 140px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .connect-container {
   gap: 2rem;
@@ -130,9 +142,6 @@ ion-icon {
 ion-icon:hover {
   font-size: 43px;
   color: #aa0e2a;
-}
-.sm-container {
-  display: flex;
 }
 
 /* ---- Form ---- */

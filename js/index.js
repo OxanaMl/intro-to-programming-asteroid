@@ -47,4 +47,23 @@ document.addEventListener("DOMContentLoaded", () => {
     messageList.appendChild(newMessage);
     messageForm.reset();
   });
+
+  //AJAX - PROJECTS SECTION
+  var githubRequest = new XMLHttpRequest();
+  githubRequest.open("GET", "https://api.github.com/users/OxanaMl/repos");
+  githubRequest.send();
+
+  githubRequest.addEventListener("load", () => {
+    const repositories = JSON.parse(githubRequest.response);
+    console.log(repositories);
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      project.innerText = repositories[i].name;
+      project.classList.add("project-card");
+      projectList.appendChild(project);
+    }
+  });
 });
