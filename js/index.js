@@ -3,11 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const today = new Date();
   let thisYear = today.getFullYear();
 
-  const footer = document.querySelector("footer");
+  const footerCopy = document.querySelector(".copy-container");
   const copyright = document.createElement("p");
   copyright.innerHTML = `&copy; Oksana Melnyk ${thisYear}`;
-  copyright.classList.add("footer-note");
-  footer.appendChild(copyright);
+  footerCopy.appendChild(copyright);
 
   //SKILLS
   const skills = ["JavaScript", "HTML", "CSS", "Git", "GitHub"];
@@ -48,7 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
     messageForm.reset();
   });
 
-  //AJAX - PROJECTS SECTION
+  //PROJECTS SECTION
+
+  //Add projects from GitHUb using XHR
+  /*
   var githubRequest = new XMLHttpRequest();
   githubRequest.open("GET", "https://api.github.com/users/OxanaMl/repos");
   githubRequest.send();
@@ -66,4 +68,22 @@ document.addEventListener("DOMContentLoaded", () => {
       projectList.appendChild(project);
     }
   });
+  */
+
+  //Add projects from GitHub using Fetch API
+  fetch("https://api.github.com/users/OxanaMl/repos")
+    .then((res) => res.json())
+    .then((repositories) => {
+      const projectSection = document.getElementById("projects");
+      const projectList = projectSection.querySelector("ul");
+
+      for (let i = 0; i < repositories.length; i++) {
+        const link = document.createElement("a");
+        link.href = repositories[i].html_url;
+        link.target = "_blank";
+        link.innerText = repositories[i].name;
+        link.classList.add("project-card");
+        projectList.appendChild(link);
+      }
+    });
 });
